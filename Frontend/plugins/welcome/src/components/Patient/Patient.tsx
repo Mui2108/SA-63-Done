@@ -43,9 +43,9 @@ const useStyles = makeStyles((theme: Theme) =>
       '& > *': {
         margin: theme.spacing(1),
         justifyContent: 'center',
-        top: 25,
+        top: 75,
       },
-      paddingTop: 45,
+      paddingTop: 95,
     },
     RootDiv: {
       display: 'flex',
