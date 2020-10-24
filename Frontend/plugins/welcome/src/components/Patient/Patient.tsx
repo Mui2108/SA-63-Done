@@ -3,6 +3,7 @@ import { EntGender } from '../../api/models/EntGender';
 import { EntTitle } from '../../api/models/EntTitle';
 import { EntJob } from '../../api/models/EntJob';
 import { EntPatien } from '../../api/models/EntPatient'
+import { Link as RouterLink } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import {
   Content,

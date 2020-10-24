@@ -18,7 +18,8 @@ import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 import Patien from '../Patient';
-
+import AssignmentIndTwoToneIcon from '@material-ui/icons/AssignmentIndTwoTone';
+import PersonAddTwoToneIcon from '@material-ui/icons/PersonAddTwoTone';
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -113,7 +114,7 @@ export default function PersistentDrawerLeft() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap>
-            Persistent drawer
+            ระบบประวัติผู้ป่วย
           </Typography>
         </Toolbar>
       </AppBar>
@@ -133,23 +134,26 @@ export default function PersistentDrawerLeft() {
         </div>
         <Divider />
         <List>
-          {['ข้อมูลผู้ป่วย', 'ผู้ป่วยใหม่'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
+          <ListItem button>
+            <ListItemIcon><AssignmentIndTwoToneIcon /></ListItemIcon>
+            ข้อมูลผู้ป่วย
+          </ListItem>
+          <ListItem button >
+            <ListItemIcon><PersonAddTwoToneIcon /></ListItemIcon>
+            ผู้ป่วยรายใหม่
+          </ListItem>
         </List>
         <Divider />
       </Drawer>
+      
       <main
         className={clsx(classes.content, {
           [classes.contentShift]: open,
         })}
       >
-        <Patien />
-
-      </main>
+          <Patien />
+        </main>
+      
     </div>
   );
 }
